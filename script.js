@@ -19,17 +19,43 @@ const CONFIG = {
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 document.addEventListener('DOMContentLoaded', () => {
-  applyWhatsappLinks();
-  initHeaderScroll();
-  initMobileNav();
-  initReveal();
-  initPortfolio();
-  initLightbox();
-  initCarousel();
-  initContactForm();
-  initNewsletter();
-  setDynamicYear();
+  [applyWhatsappLinks, initHeaderScroll, initMobileNav, initReveal, initPortfolio,
+   initLightbox, initCarousel, initContactForm, initNewsletter, setDynamicYear].forEach(safe);
 });
+
+
+/* ─── ROBUSTESSE ─────────────────────────────────────────────── */
+/* Exécute une init en isolant ses erreurs (une qui plante n'empêche pas les autres) */
+function safe(fn) {
+  try { fn(); } catch (e) { console.error('[MESH] init échouée :', (fn && fn.name) || fn, e); }
+}
+
+/* Ne jamais laisser de contenu invisible */
+function revealAll() {
+  document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('is-visible'));
+}
+// Si une erreur JS imprévue survient, on révèle tout (le site reste lisible)
+window.addEventListener('error', revealAll);
+// Après chargement, on révèle les éléments déjà à l'écran qu'un observer aurait manqués
+window.addEventListener('load', () => setTimeout(() => {
+  document.querySelectorAll('[data-reveal]:not(.is-visible)').forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('is-visible');
+  });
+}, 1000));
+
+/* Swipe tactile horizontal (mobile) */
+function addSwipe(el, onLeft, onRight) {
+  if (!el) return;
+  let x0 = null, y0 = null;
+  el.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
+  el.addEventListener('touchend', e => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    const dy = e.changedTouches[0].clientY - y0;
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) (dx < 0 ? onLeft : onRight)();
+    x0 = y0 = null;
+  }, { passive: true });
+}
 
 
 /* ─── LIENS WHATSAPP : une seule source (CONFIG) ─────────────── */
@@ -175,6 +201,7 @@ function initLightbox() {
   btnClose.addEventListener('click', close);
   btnPrev.addEventListener('click', () => step(-1));
   btnNext.addEventListener('click', () => step(1));
+  addSwipe(box, () => step(1), () => step(-1));
   box.addEventListener('click', e => { if (e.target === box) close(); });
   document.addEventListener('keydown', e => {
     if (!box.classList.contains('open')) return;
@@ -224,6 +251,9 @@ function initCarousel() {
   next.addEventListener('click', () => { go(index + 1); restart(); });
   carousel.addEventListener('mouseenter', () => clearInterval(timer));
   carousel.addEventListener('mouseleave', restart);
+  addSwipe(carousel.querySelector('.carousel-viewport'),
+    () => { go(index + 1); restart(); },
+    () => { go(index - 1); restart(); });
 
   go(0);
   restart();
