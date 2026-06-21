@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — MESH Makeup Studio</title>
+  <meta name="description" content="Portfolio des créations MESH Makeup Studio : maquillage mariage, éditorial, soirée. Découvrez nos réalisations." />
+  <meta name="theme-color" content="#0a0908" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="alternate icon" href="favicon.svg" type="image/svg+xml" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="MESH Makeup Studio" />
+  <meta property="og:title" content="Portfolio — MESH Makeup Studio" />
+  <meta property="og:description" content="Nos plus belles réalisations beauté." />
+  <meta property="og:image" content="images/invitee-rose.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand" aria-label="MESH Makeup Studio, accueil">
+        <img class="brand-logo" src="images/logo-mark-gold.png" alt="" width="44" height="44" />
+        <span class="brand-text">
+          <span class="brand-mark">MESH</span>
+          <span class="brand-sub">Makeup Studio</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-controls="primary-nav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html">Prestations</a></li>
+          <li><a href="formations.html">Formations</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+          <li><a href="avis.html">Avis</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="nav-cta">Prendre RDV</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-banner">
+      <!-- PHOTO : bannière portfolio -->
+      <img src="images/invitee-rose.jpg" alt="Portfolio MESH Makeup Studio" />
+      <div class="page-banner-body">
+        <p class="page-crumb"><a href="index.html">Accueil</a> &nbsp;/&nbsp; Portfolio</p>
+        <h1 class="page-title">Portfolio <em>Beauté</em></h1>
+      </div>
+    </section>
+
+    <section class="section section--flush">
+      <div class="container">
+        <div class="filters" role="group" aria-label="Filtrer le portfolio">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true">Tous</button>
+          <button class="filter" type="button" data-filter="mariee" aria-pressed="false">Mariée</button>
+          <button class="filter" type="button" data-filter="invitee" aria-pressed="false">Invitée</button>
+          <button class="filter" type="button" data-filter="coiffure" aria-pressed="false">Coiffure</button>
+        </div>
+
+        <div class="gallery" data-reveal>
+          <button class="gallery-item is-tall" type="button" data-category="mariee" data-caption="Mariée — Couronne" aria-label="Agrandir : Mariée à la couronne">
+            <img src="images/mariee-couronne.jpg" data-full="images/mariee-couronne.jpg" alt="Mariée à la couronne — MESH Makeup Studio" loading="lazy" />
+            <span class="gallery-cap"><span>Mariée — Couronne</span></span>
+          </button>
+          <button class="gallery-item" type="button" data-category="mariee" data-caption="Mariée — Voile" aria-label="Agrandir : Mariée voilée">
+            <img src="images/mariee-voile.jpg" data-full="images/mariee-voile.jpg" alt="Mariée voilée — MESH Makeup Studio" loading="lazy" />
+            <span class="gallery-cap"><span>Mariée — Voile</span></span>
+          </button>
+          <button class="gallery-item is-tall" type="button" data-category="invitee" data-caption="Invitée — Glam rosé" aria-label="Agrandir : Invitée glam rosé">
+            <img src="images/invitee-rose.jpg" data-full="images/invitee-rose.jpg" alt="Invitée glam rosé — MESH Makeup Studio" loading="lazy" />
+            <span class="gallery-cap"><span>Invitée — Glam rosé</span></span>
+          </button>
+          <button class="gallery-item" type="button" data-category="coiffure" data-caption="Coiffure — Ondulés" aria-label="Agrandir : Coiffure ondulée">
+            <img src="images/coiffure-ondulee.jpg" data-full="images/coiffure-ondulee.jpg" alt="Coiffure ondulée — MESH Makeup Studio" loading="lazy" />
+            <span class="gallery-cap"><span>Coiffure — Ondulés</span></span>
+          </button>
+          <button class="gallery-item" type="button" data-category="invitee" data-caption="Invitée — Soirée" aria-label="Agrandir : Invitée soirée">
+            <img src="images/invitee-rouge.jpg" data-full="images/invitee-rouge.jpg" alt="Invitée soirée — MESH Makeup Studio" loading="lazy" />
+            <span class="gallery-cap"><span>Invitée — Soirée</span></span>
+          </button>
+          <button class="gallery-item" type="button" data-category="mariee" data-caption="Mariée — Hijab" aria-label="Agrandir : Mariée hijab">
+            <img src="images/mariee-hijab.jpg" data-full="images/mariee-hijab.jpg" alt="Mariée hijab — MESH Makeup Studio" loading="lazy" />
+            <span class="gallery-cap"><span>Mariée — Hijab</span></span>
+          </button>
+          <button class="gallery-item" type="button" data-category="coiffure" data-caption="Coiffure — Vagues" aria-label="Agrandir : Coiffure vagues">
+            <img src="images/coiffure-vagues.jpg" data-full="images/coiffure-vagues.jpg" alt="Coiffure vagues — MESH Makeup Studio" loading="lazy" />
+            <span class="gallery-cap"><span>Coiffure — Vagues</span></span>
+          </button>
+          <button class="gallery-item" type="button" data-category="invitee" data-caption="Invitée — Satiné" aria-label="Agrandir : Invitée satiné">
+            <img src="images/invitee-satin.jpg" data-full="images/invitee-satin.jpg" alt="Invitée satiné — MESH Makeup Studio" loading="lazy" />
+            <span class="gallery-cap"><span>Invitée — Satiné</span></span>
+          </button>
+          <button class="gallery-item" type="button" data-category="coiffure" data-caption="Coiffure — Chignon" aria-label="Agrandir : Coiffure chignon">
+            <img src="images/invitee-chignon.jpg" data-full="images/invitee-chignon.jpg" alt="Coiffure chignon — MESH Makeup Studio" loading="lazy" />
+            <span class="gallery-cap"><span>Coiffure — Chignon</span></span>
+          </button>
+          <button class="gallery-item is-tall" type="button" data-category="mariee" data-caption="Mariée — Couronne dorée" aria-label="Agrandir : Mariée à la couronne dorée">
+            <img src="images/mariee-couronne-or.jpg" data-full="images/mariee-couronne-or.jpg" alt="Mariée à la couronne dorée — MESH Makeup Studio" loading="lazy" />
+            <span class="gallery-cap"><span>Mariée — Couronne dorée</span></span>
+          </button>
+          <button class="gallery-item" type="button" data-category="invitee" data-caption="Invitée — Pastel glam" aria-label="Agrandir : Invitée glam pastel">
+            <img src="images/invitee-pastel.jpg" data-full="images/invitee-pastel.jpg" alt="Invitée glam pastel — MESH Makeup Studio" loading="lazy" />
+            <span class="gallery-cap"><span>Invitée — Pastel glam</span></span>
+          </button>
+          <button class="gallery-item is-tall" type="button" data-category="mariee" data-caption="Mariée — Voile rouge" aria-label="Agrandir : Mariée au voile rouge">
+            <img src="images/mariee-voile-rouge.jpg" data-full="images/mariee-voile-rouge.jpg" alt="Mariée au voile rouge — MESH Makeup Studio" loading="lazy" />
+            <span class="gallery-cap"><span>Mariée — Voile rouge</span></span>
+          </button>
+          <button class="gallery-item" type="button" data-category="mariee" data-caption="Mariée — Or" aria-label="Agrandir : Mariée en doré">
+            <img src="images/mariee-or-pose.jpg" data-full="images/mariee-or-pose.jpg" alt="Mariée en doré — MESH Makeup Studio" loading="lazy" />
+            <span class="gallery-cap"><span>Mariée — Or</span></span>
+          </button>
+        </div>
+
+        <div class="portfolio-cta" style="text-align:center; margin-top:48px;" data-reveal>
+          <a href="https://www.instagram.com/mesh_makeup_studio" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">Voir plus sur Instagram @mesh_makeup_studio</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Aperçu de la photo">
+    <button class="lightbox-btn lightbox-close" type="button" aria-label="Fermer">×</button>
+    <button class="lightbox-btn lightbox-prev" type="button" aria-label="Précédent">‹</button>
+    <figure class="lightbox-figure">
+      <img src="" alt="" />
+      <figcaption class="lightbox-cap"></figcaption>
+    </figure>
+    <button class="lightbox-btn lightbox-next" type="button" aria-label="Suivant">›</button>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo-link" aria-label="MESH Makeup Studio, accueil"><img class="footer-logo-img" src="images/logo-full-gold.png" alt="MESH Makeup Studio" /></a>
+            <p>Maquillage &amp; coiffure à Marseille. Invitée, mariée, retouches &amp; accompagnement jour J.</p>
+            <div class="footer-social">
+              <a href="https://www.instagram.com/mesh_makeup_studio" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+              <a class="js-whatsapp" href="https://wa.me/33646925489" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </div>
+          </div>
+          <nav class="footer-col" aria-label="Liens prestations">
+            <h4>Prestations</h4>
+            <ul>
+              <li><a href="services.html">Prestations Invitée</a></li>
+              <li><a href="services.html">Prestations Mariée</a></li>
+              <li><a href="services.html">Retouches &amp; Transformations</a></li>
+              <li><a href="services.html">Accompagnement Jour J</a></li>
+              <li><a href="formations.html">Formations</a></li>
+            </ul>
+          </nav>
+          <nav class="footer-col" aria-label="Liens studio">
+            <h4>Studio</h4>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="about.html">À propos</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="avis.html">Avis clients</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="footer-news">
+            <h4>Newsletter</h4>
+            <p>Conseils beauté et actualités du studio, directement dans votre boîte mail.</p>
+            <form class="news-form" novalidate>
+              <label class="sr-only" for="news-email-portfolio">Votre email</label>
+              <input id="news-email-portfolio" type="email" placeholder="Votre email" autocomplete="email" required />
+              <button type="submit">S'abonner</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span data-year>2026</span> MESH Makeup Studio — Tous droits réservés</p>
+        <div class="footer-legal">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Politique de confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float js-whatsapp" href="https://wa.me/33646925489" target="_blank" rel="noopener noreferrer" aria-label="Nous contacter sur WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
