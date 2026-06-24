@@ -321,6 +321,7 @@ function initContactForm() {
       `• Téléphone : ${get('telephone')}`,
       `• Prestation : ${get('service')}`,
       `• Date souhaitée : ${get('date')}`,
+      `• Prête au plus tard à : ${get('heure_prete')}`,
       '',
       `Message :`,
       get('message'),
