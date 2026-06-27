@@ -697,6 +697,14 @@ button { font-family: inherit; cursor: pointer; }
   /* Nav mobile */
   .nav-toggle { display: flex; }
   .nav-cta { display: none; }
+  /* Fix iOS : le backdrop-filter du header piège le menu en position:fixed.
+     On le retire en mobile (fond quasi-opaque à la place) pour que le menu
+     se positionne bien par rapport à tout l'écran. */
+  .site-header.scrolled {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: rgba(10,9,8,.97);
+  }
   .primary-nav {
     position: fixed; inset: 0 0 0 auto; width: min(80vw, 320px);
     background: var(--night); border-left: 1px solid var(--line);
