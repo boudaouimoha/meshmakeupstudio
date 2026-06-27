@@ -706,14 +706,21 @@ button { font-family: inherit; cursor: pointer; }
     background: rgba(10,9,8,.97);
   }
   .primary-nav {
-    position: fixed; inset: 0 0 0 auto; width: min(80vw, 320px);
-    background: var(--night); border-left: 1px solid var(--line);
+    position: fixed; inset: 0; width: 100%;
+    background: var(--night);
     transform: translateX(100%); transition: transform .4s var(--ease);
     display: flex; align-items: center; z-index: 1050;
   }
   .primary-nav.open { transform: translateX(0); }
-  .primary-nav ul { flex-direction: column; align-items: flex-start; gap: 26px; padding: 0 40px; width: 100%; }
-  .primary-nav a { font-size: 1rem; letter-spacing: .12em; }
+  .primary-nav ul {
+    flex-direction: column; align-items: flex-start;
+    gap: clamp(20px, 3.2vh, 32px);
+    padding: var(--header-h) var(--pad) 40px;
+    width: 100%;
+  }
+  .primary-nav a { font-size: 1.5rem; letter-spacing: .06em; }
+  /* masque le bouton WhatsApp flottant quand le menu plein écran est ouvert */
+  body.menu-open .wa-float { opacity: 0; pointer-events: none; }
 
   .hero-actions { flex-direction: column; align-items: stretch; }
   .hero-actions .btn { width: 100%; }

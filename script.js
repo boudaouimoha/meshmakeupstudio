@@ -85,11 +85,13 @@ function initMobileNav() {
   const close = () => {
     toggle.setAttribute('aria-expanded', 'false');
     nav.classList.remove('open');
+    document.body.classList.remove('menu-open');
     document.body.style.overflow = '';
   };
   const open = () => {
     toggle.setAttribute('aria-expanded', 'true');
     nav.classList.add('open');
+    document.body.classList.add('menu-open');
     document.body.style.overflow = 'hidden';
   };
 
