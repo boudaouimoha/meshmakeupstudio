@@ -314,14 +314,15 @@ function initContactForm() {
   const buildMessage = () => {
     const get = (name) => (form[name] && form[name].value.trim()) || '—';
     const lines = [
-      '✨ Nouvelle demande — MESH Makeup Studio',
+      '⚜️ Nouvelle demande — MESH Makeup Studio ⚜️',
       '',
       `• Nom : ${get('nom')}`,
       `• Email : ${get('email')}`,
-      `• Téléphone : ${get('telephone')}`,
-      `• Prestation : ${get('service')}`,
+      `• Téléphone 📲 : ${get('telephone')}`,
+      `• Prestation ✨ : ${get('service')}`,
       `• Date souhaitée : ${get('date')}`,
       `• Prête au plus tard à : ${get('heure_prete')}`,
+      `• Ville 📍 : ${get('ville')}`,
       '',
       `Message :`,
       get('message'),
